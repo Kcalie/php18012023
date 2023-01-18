@@ -1,3 +1,12 @@
+<?php
+function retourPrenom($prenom)
+{
+    echo 'bonjour votre prenom est ';
+    echo $prenom;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +16,6 @@
     <title>votre prenom</title>
 </head>
 <body>
-    bonjour votre prenom est <?php echo $_POST['prenom']; ?>
+    bonjour votre prenom est <?php retourPrenom($_POST['prenom']); ?>
 </body>
 </html>
