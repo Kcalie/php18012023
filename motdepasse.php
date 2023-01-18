@@ -1,6 +1,20 @@
 <?php
-$login = 'admin';
-$password = 'admin';
+//$login = 'admin';
+//$password = 'admin';
+$login = ['admin','gerald','joseph'];
+$password = array('admin','admin2','admin3');
+//echo $password[1];
+
+
+// exemple d'un tableau multi
+$tableau_multi = array(
+    array('prenom' => 'Joseph','nom' => 'Larregain', 'mensuration' => array('taille' => 180, 'poids' => 83)),
+    array('prenom' => 'Geoffrey' 'nom' => 'Praud', 'mensuration' => array('taille' => 176, 'poids' => 140))
+);
+//$tableau_multi[0]['prenom']
+
+
+
 if(isset($_POST['submit']))
 {    
     // verif si les champs ne sont pas vide avec empty() ! signifie different
