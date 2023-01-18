@@ -24,10 +24,10 @@ function calculVolume($rayon,$hauteur)
     ?>
     <form method="POST" action="">
         <label for="rayon">rayon :</label>
-        <input type="text" name="rayon" />
+        <input type="text" name="rayon" value="<?php if(isset($_POST['rayon'])) echo $_POST['rayon']; ?>" /> <!--pour tjrs voir le rayon et la hauteur après avoir fait le calcul-->
         <br />
-        <label for="hauteur">rayon :</label>
-        <input type="text" name="hauteur" />
+        <label for="hauteur">hauteur :</label>
+        <input type="text" name="hauteur" value="<?php if(isset($_POST['hauteur'])) echo $_POST['hauteur']; ?>" />
         <br />
         <button type="submit" name="submit">Calculer</button>
     </form>
