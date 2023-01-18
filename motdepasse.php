@@ -1,4 +1,19 @@
-<?php
+<?php //session = serveur, cookie = post client
+session_start();
+function genererToken()
+{
+    $token = 'azertyuiopqsdfghjklmwxcvbn123456789AZERTYUIOPQSDFGHJKLMWXCVBN';
+    $longueur = rand(13,20);
+    $ch = '';
+    for($i=0;$i<$longueur;$i++)
+    {
+        $ch.= $token[rand(0,strlen($token)-1)];
+    }
+    return $ch;
+}
+$_SESSION['token'] = genererToken();
+
+
 //$login = 'admin';
 //$password = 'admin';
 $login = ['admin','gerald','joseph'];
@@ -12,7 +27,7 @@ $tableau_multi = array(
     array('prenom' => 'Geoffrey', 'nom' => 'Praud', 'mensuration' => array('taille' => 176, 'poids' => 140))
 );
 //$tableau_multi[0]['prenom']
-
+/*
 //boucle while
 $i=0;
 while($i < count($login))
@@ -30,7 +45,7 @@ foreach($login as $identifiant)
 {
     echo $identifiant;
 }
-
+*/
 
 
 if(isset($_POST['submit']))
@@ -39,18 +54,22 @@ if(isset($_POST['submit']))
     if(!empty($_POST['login']) && $_POST['password'])
     {
         // verif login & password correspondent
-        if(($_POST['login'] == $login) && ($_POST['password'] == $password))
+        if((in_array($_POST['login'],$login)) && (in_array($_POST['password'],$password)))
         {
-            echo 'vous êtes connecter';
+            setcookie('login',$_POST['login'],(time()+3600));
+            setcookie('password',$_POST['password'],(time()+3600));
+            header('location:membres.php?tok='.$_SESSION['token']);
+            exit;
+            /*echo 'vous êtes connecter';*/
         }
         else 
         {
             // affiche un message quand le login && mdp ne sont pas bon 
-            if($_POST['login'] != $login)
+            if(!in_array($_POST['login'],$login))
             {
                 echo ' login incorrect';
             }
-            if($_POST['password'] != $password)
+            if(!in_array($_POST['password'],$password))
             {
                 echo ' password incorrect';
             }
