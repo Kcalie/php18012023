@@ -7,8 +7,8 @@
 </head>
 <body>
     <h2>des liens vers une page php</h2>
-    <a href="cible.php?nom=Léger&prenom=Gérald">Lien vers gérald</a>
-    <a href="cible.php?nom=Eclair&prenom=Buzz">Lien vers buzz</a>
+    <a href="cible.php?nom=Léger&prenom=Gérald">Lien vers gérald</a><br />
+    <a href="cible.php?nom=Eclair&prenom=Buzz">Lien vers buzz</a><br />
     <a href="cible.php?nom=Patate&prenom=Monsieur">Lien vers monsieur Patate</a>
 </body>
 </html>
