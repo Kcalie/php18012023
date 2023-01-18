@@ -13,6 +13,7 @@
     <a href="cible.php?nom=Patate&prenom=Monsieur">Lien vers monsieur Patate</a><br />
     <a href="formulaire.php">form</a><br />
     <a href="calcul.php">calcul</a>
-    <a href="age.php">Age</a>
+    <a href="age.php">Age</a><br />
+    <a href="motdepasse.php">motdepasse</a>
 </body>
 </html>
