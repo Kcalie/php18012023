@@ -2,16 +2,34 @@
 //$login = 'admin';
 //$password = 'admin';
 $login = ['admin','gerald','joseph'];
-$password = array('admin','admin2','admin3');
+$password = array('admin','gerald','joseph');
 //echo $password[1];
 
 
 // exemple d'un tableau multi
 $tableau_multi = array(
     array('prenom' => 'Joseph','nom' => 'Larregain', 'mensuration' => array('taille' => 180, 'poids' => 83)),
-    array('prenom' => 'Geoffrey' 'nom' => 'Praud', 'mensuration' => array('taille' => 176, 'poids' => 140))
+    array('prenom' => 'Geoffrey', 'nom' => 'Praud', 'mensuration' => array('taille' => 176, 'poids' => 140))
 );
 //$tableau_multi[0]['prenom']
+
+//boucle while
+$i=0;
+while($i < count($login))
+{
+    echo $login[$i];
+    $i++;
+}
+//boucle for
+for($i=0;$i<count($login);$i++)
+{
+    echo $login[$i];
+}
+//boucle foreach
+foreach($login as $identifiant)
+{
+    echo $identifiant;
+}
 
 
 
