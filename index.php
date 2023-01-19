@@ -15,6 +15,7 @@
     <a href="calcul.php">calcul</a>
     <a href="age.php">Age</a><br />
     <a href="motdepasse.php">motdepasse</a><br />
-    <a href="deco.php">deco</a>
+    <a href="deco.php">deco</a><br />
+    <a href="random.php">random</a>
 </body>
 </html>
